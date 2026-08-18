@@ -1,0 +1,254 @@
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+/* ================= NAVBAR ================= */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #030202;
+  padding: 10px 20px;
+}
+
+.nav h1 {
+  color: white;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  color: orange;
+}
+
+/* ================= COMMON FORM ================= */
+.form-container {
+  width: 320px;
+  margin: 80px auto;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-container input {
+  width: 90%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ================= TRACKING ================= */
+.tracking {
+  width: 350px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 25px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.tracking input {
+  width: 90%;
+  padding: 10px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+.tracking button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* ================= HISTORY ================= */
+.history {
+  width: 400px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.history-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ================= HOME ================= */
+.home {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.home h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+.home h3 {
+  color: #555;
+}
+
+.home .btn-group {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.home .card {
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* ================= ERROR PAGE ================= */
+
+.error-page {
+ height: 500px;
+ width: 550px;
+ display: grid;
+ place-items: center;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 150px;
+ background-color: #092aadad;
+ color: white;
+ text-align: center;
+ font-family: "Segoe UI", Arial, sans-serif;
+ border: 2px solid black;
+ border-radius: 50px;
+
+}
+
+/* ===== CONTENT ===== */
+.error-page h1 {
+  font-size: 80px;
+  margin: 0;
+  font-weight: bold;
+  animation: float 2s ease-in-out infinite;
+}
+
+.error-page h2 {
+  margin: 10px 0;
+  font-size: 26px;
+}
+
+.error-page p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* ===== BUTTON ===== */
+.error-page button {
+  
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: #ff7a18;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.error-page button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 500px) {
+  .form-container,
+  .tracking,
+  .history,
+  .home .card {
+    width: 90%;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
