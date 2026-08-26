@@ -933,6 +933,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           top: 0;
           z-index: 9999;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+          box-sizing: border-box;
         }
 
         /* ================= LOGO ================= */
@@ -976,8 +977,6 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           transform: translateY(-2px);
         }
 
-        
-
         /* ================= MENU BUTTON ================= */
 
         .menu-btn {
@@ -1014,7 +1013,6 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             padding: 9px 10px;
             font-size: 14px;
           }
-
         }
 
         /* ================= MOBILE ================= */
@@ -1023,26 +1021,29 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
           .nav {
             height: 65px;
-            padding: 0 20px;
+            padding: 0 15px;
           }
 
           .nav-logo h1 {
-            font-size: 21px;
+            font-size: 20px;
           }
 
-          /* Show menu button */
+          /* HAMBURGER */
 
           .menu-btn {
             display: flex;
+            flex-shrink: 0;
           }
 
-          /* Mobile navigation */
+          /* MOBILE MENU */
 
           .nav-links {
             position: absolute;
             top: 65px;
             left: 0;
+
             width: 100%;
+            box-sizing: border-box;
 
             background: linear-gradient(
               180deg,
@@ -1055,12 +1056,13 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             align-items: stretch;
 
             gap: 5px;
-            padding: 15px 20px 20px;
+            padding: 15px;
 
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 
             opacity: 0;
             visibility: hidden;
+
             transform: translateY(-15px);
 
             transition:
@@ -1069,7 +1071,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
               visibility 0.3s ease;
           }
 
-          /* Open menu */
+          /* OPEN MENU */
 
           .nav-links.open {
             opacity: 1;
@@ -1077,10 +1079,15 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             transform: translateY(0);
           }
 
+          /* MOBILE LINKS */
+
           .nav-links a {
             width: 100%;
+            box-sizing: border-box;
+
             text-align: center;
             padding: 13px 15px;
+
             border-radius: 8px;
             font-size: 15px;
           }
@@ -1091,9 +1098,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           }
 
           .book-link {
-            margin-top: 5px;
+            margin-top: 0;
           }
-
         }
 
         /* ================= SMALL MOBILE ================= */
@@ -1101,21 +1107,21 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         @media (max-width: 400px) {
 
           .nav {
-            padding: 0 15px;
+            padding: 0 12px;
           }
 
           .nav-logo h1 {
-            font-size: 19px;
+            font-size: 18px;
           }
 
           .menu-btn {
             width: 42px;
             height: 40px;
+            font-size: 23px;
           }
-
         }
 
-      `}),(0,j.jsxs)(`nav`,{className:`nav`,children:[(0,j.jsx)(A,{to:`/`,className:`nav-logo`,onClick:n,children:(0,j.jsxs)(`h1`,{children:[`🚚  VH Parcel `,(0,j.jsx)(`span`,{children:`Booking`})]})}),(0,j.jsx)(`button`,{className:`menu-btn`,onClick:()=>t(!e),"aria-label":`Toggle navigation`,children:e?`✕`:`☰`}),(0,j.jsxs)(`div`,{className:`nav-links ${e?`open`:``}`,children:[(0,j.jsx)(A,{to:`/`,onClick:n,children:`🏠 Home`}),(0,j.jsx)(A,{to:`/book`,className:`book-link`,onClick:n,children:`📦 Book Parcel`}),(0,j.jsx)(A,{to:`/track`,onClick:n,children:`📍 Track`}),(0,j.jsx)(A,{to:`/history`,onClick:n,children:`📋 History`})]})]})]})}function Hn(){let e=_t(),[t,n]=(0,x.useState)({sender:``,receiver:``,weight:``,address:``}),r=e=>{n({...t,[e.target.name]:e.target.value})};return(0,j.jsxs)(j.Fragment,{children:[(0,j.jsx)(`style`,{children:`
+      `}),(0,j.jsxs)(`nav`,{className:`nav`,children:[(0,j.jsx)(A,{to:`/`,className:`nav-logo`,onClick:n,children:(0,j.jsxs)(`h1`,{children:[`🚚 VH Parcel `,(0,j.jsx)(`span`,{children:`Booking`})]})}),(0,j.jsx)(`button`,{type:`button`,className:`menu-btn`,onClick:()=>t(!e),"aria-label":`Toggle navigation`,"aria-expanded":e,children:e?`✕`:`☰`}),(0,j.jsxs)(`div`,{className:`nav-links ${e?`open`:``}`,children:[(0,j.jsx)(A,{to:`/`,onClick:n,children:`🏠 Home`}),(0,j.jsx)(A,{to:`/book`,className:`book-link`,onClick:n,children:`📦 Book Parcel`}),(0,j.jsx)(A,{to:`/track`,onClick:n,children:`📍 Track`}),(0,j.jsx)(A,{to:`/history`,onClick:n,children:`📋 History`})]})]})]})}function Hn(){let e=_t(),[t,n]=(0,x.useState)({sender:``,receiver:``,weight:``,address:``}),r=e=>{n({...t,[e.target.name]:e.target.value})};return(0,j.jsxs)(j.Fragment,{children:[(0,j.jsx)(`style`,{children:`
 
         * {
           box-sizing: border-box;
