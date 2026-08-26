@@ -925,34 +925,49 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           height: 70px;
           background: linear-gradient(135deg, #0062cc, #00a8e8);
           color: white;
+
           display: flex;
           align-items: center;
           justify-content: space-between;
+
           padding: 0 6%;
+          box-sizing: border-box;
+
           position: sticky;
           top: 0;
           z-index: 9999;
+
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-          box-sizing: border-box;
         }
+
 
         /* ================= LOGO ================= */
 
         .nav-logo {
           text-decoration: none;
           color: white;
+
+          display: flex;
+          align-items: center;
+
+          flex-shrink: 1;
+          min-width: 0;
         }
 
         .nav-logo h1 {
           margin: 0;
+
           font-size: 24px;
           font-weight: 800;
+
           white-space: nowrap;
+          line-height: 1;
         }
 
         .nav-logo span {
           color: #dff6ff;
         }
+
 
         /* ================= NAV LINKS ================= */
 
@@ -965,10 +980,13 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         .nav-links a {
           color: white;
           text-decoration: none;
+
           font-size: 15px;
           font-weight: 600;
+
           padding: 10px 15px;
           border-radius: 8px;
+
           transition: 0.3s;
         }
 
@@ -977,25 +995,35 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           transform: translateY(-2px);
         }
 
-        /* ================= MENU BUTTON ================= */
+
+        /* ================= HAMBURGER ================= */
 
         .menu-btn {
           display: none;
+
           width: 45px;
           height: 42px;
+
           border: none;
           border-radius: 8px;
+
           background: rgba(255, 255, 255, 0.15);
           color: white;
+
           cursor: pointer;
+
           font-size: 25px;
+
           align-items: center;
           justify-content: center;
+
+          flex-shrink: 0;
         }
 
         .menu-btn:hover {
           background: rgba(255, 255, 255, 0.25);
         }
+
 
         /* ================= TABLET ================= */
 
@@ -1015,34 +1043,84 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           }
         }
 
+
         /* ================= MOBILE ================= */
 
         @media (max-width: 700px) {
 
           .nav {
+            width: 100%;
             height: 65px;
-            padding: 0 15px;
+
+            padding: 0 10px;
+
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+            justify-content: space-between;
+
+            flex-wrap: nowrap;
+          }
+
+
+          /* LOGO */
+
+          .nav-logo {
+            flex: 1 1 auto;
+
+            min-width: 0;
+            width: auto;
+
+            display: flex;
+            align-items: center;
+
+            overflow: hidden;
           }
 
           .nav-logo h1 {
-            font-size: 20px;
+            margin: 0;
+
+            font-size: 19px;
+            line-height: 1;
+
+            white-space: nowrap;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
+
 
           /* HAMBURGER */
 
           .menu-btn {
             display: flex;
-            flex-shrink: 0;
+
+            flex: 0 0 42px;
+
+            width: 42px;
+            height: 40px;
+
+            margin-left: 8px;
+            padding: 0;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 23px;
           }
 
-          /* MOBILE MENU */
+
+          /* ================= MOBILE MENU ================= */
 
           .nav-links {
             position: absolute;
+
             top: 65px;
             left: 0;
 
             width: 100%;
+
             box-sizing: border-box;
 
             background: linear-gradient(
@@ -1056,6 +1134,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             align-items: stretch;
 
             gap: 5px;
+
             padding: 15px;
 
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -1071,29 +1150,36 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
               visibility 0.3s ease;
           }
 
+
           /* OPEN MENU */
 
           .nav-links.open {
             opacity: 1;
             visibility: visible;
+
             transform: translateY(0);
           }
+
 
           /* MOBILE LINKS */
 
           .nav-links a {
             width: 100%;
+
             box-sizing: border-box;
 
             text-align: center;
-            padding: 13px 15px;
+
+            padding: 13px 10px;
 
             border-radius: 8px;
+
             font-size: 15px;
           }
 
           .nav-links a:hover {
             background: rgba(255, 255, 255, 0.15);
+
             transform: none;
           }
 
@@ -1102,36 +1188,112 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           }
         }
 
+
         /* ================= SMALL MOBILE ================= */
 
         @media (max-width: 400px) {
 
-  .nav {
-    width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
+          .nav {
+            width: 100%;
 
-  .nav-logo {
-    max-width: calc(100% - 55px);
-    overflow: hidden;
-  }
+            height: 60px;
 
-  .nav-logo h1 {
-    font-size: 17px;
-    white-space: nowrap;
-  }
+            padding: 0 8px;
 
-  .menu-btn {
-    width: 42px;
-    height: 40px;
-    font-size: 23px;
+            display: flex;
+            flex-direction: row;
 
-    /* RIGHT CORNER */
-    margin-left: auto;
-    flex-shrink: 0;
-  }
-}
+            align-items: center;
+
+            justify-content: space-between;
+
+            flex-wrap: nowrap;
+          }
+
+
+          /* LOGO */
+
+          .nav-logo {
+            flex: 1 1 auto;
+
+            min-width: 0;
+
+            max-width: calc(100% - 50px);
+
+            overflow: hidden;
+          }
+
+          .nav-logo h1 {
+            font-size: 16px;
+
+            line-height: 1;
+
+            white-space: nowrap;
+
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+          }
+
+
+          /* HAMBURGER RIGHT */
+
+          .menu-btn {
+            display: flex;
+
+            width: 40px;
+            height: 38px;
+
+            flex: 0 0 40px;
+
+            margin-left: 6px;
+
+            padding: 0;
+
+            font-size: 22px;
+
+            align-items: center;
+            justify-content: center;
+          }
+
+
+          /* MOBILE MENU POSITION */
+
+          .nav-links {
+            top: 60px;
+          }
+        }
+
+
+        /* ================= EXTRA SMALL PHONES ================= */
+
+        @media (max-width: 350px) {
+
+          .nav {
+            padding: 0 6px;
+          }
+
+
+          .nav-logo {
+            max-width: calc(100% - 46px);
+          }
+
+          .nav-logo h1 {
+            font-size: 14px;
+          }
+
+
+          .menu-btn {
+            width: 38px;
+            height: 36px;
+
+            flex: 0 0 38px;
+
+            font-size: 20px;
+
+            margin-left: 5px;
+          }
+        }
 
       `}),(0,j.jsxs)(`nav`,{className:`nav`,children:[(0,j.jsx)(A,{to:`/`,className:`nav-logo`,onClick:n,children:(0,j.jsxs)(`h1`,{children:[`🚚 VH Parcel `,(0,j.jsx)(`span`,{children:`Booking`})]})}),(0,j.jsx)(`button`,{type:`button`,className:`menu-btn`,onClick:()=>t(!e),"aria-label":`Toggle navigation`,"aria-expanded":e,children:e?`✕`:`☰`}),(0,j.jsxs)(`div`,{className:`nav-links ${e?`open`:``}`,children:[(0,j.jsx)(A,{to:`/`,onClick:n,children:`🏠 Home`}),(0,j.jsx)(A,{to:`/book`,className:`book-link`,onClick:n,children:`📦 Book Parcel`}),(0,j.jsx)(A,{to:`/track`,onClick:n,children:`📍 Track`}),(0,j.jsx)(A,{to:`/history`,onClick:n,children:`📋 History`})]})]})]})}function Hn(){let e=_t(),[t,n]=(0,x.useState)({sender:``,receiver:``,weight:``,address:``}),r=e=>{n({...t,[e.target.name]:e.target.value})};return(0,j.jsxs)(j.Fragment,{children:[(0,j.jsx)(`style`,{children:`
 
