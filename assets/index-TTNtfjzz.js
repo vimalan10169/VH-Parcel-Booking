@@ -1106,20 +1106,32 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
         @media (max-width: 400px) {
 
-          .nav {
-            padding: 0 12px;
-          }
+  .nav {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
 
-          .nav-logo h1 {
-            font-size: 18px;
-          }
+  .nav-logo {
+    max-width: calc(100% - 55px);
+    overflow: hidden;
+  }
 
-          .menu-btn {
-            width: 42px;
-            height: 40px;
-            font-size: 23px;
-          }
-        }
+  .nav-logo h1 {
+    font-size: 17px;
+    white-space: nowrap;
+  }
+
+  .menu-btn {
+    width: 42px;
+    height: 40px;
+    font-size: 23px;
+
+    /* RIGHT CORNER */
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+}
 
       `}),(0,j.jsxs)(`nav`,{className:`nav`,children:[(0,j.jsx)(A,{to:`/`,className:`nav-logo`,onClick:n,children:(0,j.jsxs)(`h1`,{children:[`🚚 VH Parcel `,(0,j.jsx)(`span`,{children:`Booking`})]})}),(0,j.jsx)(`button`,{type:`button`,className:`menu-btn`,onClick:()=>t(!e),"aria-label":`Toggle navigation`,"aria-expanded":e,children:e?`✕`:`☰`}),(0,j.jsxs)(`div`,{className:`nav-links ${e?`open`:``}`,children:[(0,j.jsx)(A,{to:`/`,onClick:n,children:`🏠 Home`}),(0,j.jsx)(A,{to:`/book`,className:`book-link`,onClick:n,children:`📦 Book Parcel`}),(0,j.jsx)(A,{to:`/track`,onClick:n,children:`📍 Track`}),(0,j.jsx)(A,{to:`/history`,onClick:n,children:`📋 History`})]})]})]})}function Hn(){let e=_t(),[t,n]=(0,x.useState)({sender:``,receiver:``,weight:``,address:``}),r=e=>{n({...t,[e.target.name]:e.target.value})};return(0,j.jsxs)(j.Fragment,{children:[(0,j.jsx)(`style`,{children:`
 
